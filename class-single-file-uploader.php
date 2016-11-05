@@ -25,9 +25,9 @@ class Single_File_Uploader extends File_Uploader {
 
         }
 
-        $this->setup_directory();
+        $path = $this->setup_directory();
 
-        if ( false === move_uploaded_file( $this->files['tmp_name'], $this->root . '/' . $file_name ) ) {
+        if ( false === move_uploaded_file( $this->files['tmp_name'], $path . '/' . $file_name ) ) {
 
             return 'Não foi possível fazer o upload!';
 

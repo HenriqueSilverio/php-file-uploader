@@ -37,7 +37,7 @@ abstract class File_Uploader {
 
         }
 
-        $this->root = $path;
+        return $path;
 
     }
 
